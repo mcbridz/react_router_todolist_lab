@@ -13,6 +13,7 @@ const Todos = (props) => {
                     <Todo text={todo.text} date={todo.date} />
                 })}
             </ul>
+            <newTodo todos={todos} setTodos={setTodos} />
         </div>
     )
 }
