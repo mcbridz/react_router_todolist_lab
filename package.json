@@ -1,0 +1,22 @@
+{
+  "name": "react_router_todolist_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcbridz/react_router_todolist_lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcbridz/react_router_todolist_lab/issues"
+  },
+  "homepage": "https://github.com/mcbridz/react_router_todolist_lab#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
