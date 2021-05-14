@@ -13,9 +13,10 @@ const Todo = (props) => {
     let todos = props.todos
     // console.log('displayTodos')
     // console.log(displayTodos)
+    let sendTodos = props.sendTodos
     return (
         <li>
-            <div>{text}{(props.done) ? '' : <button onClick={() => markDone(id, todos, setTodos)}>Done</button>}</div>
+            <div>{text}{(props.done) ? '' : <button onClick={() => markDone(id, todos, setTodos, sendTodos)}>Done</button>}</div>
             <div>{date.toString()}</div>
         </li>
     )

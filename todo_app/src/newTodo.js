@@ -4,6 +4,7 @@ const NewTodo = (props) => {
     let todos = props.todos
     let setTodos = props.setTodos
     let newKey = todos.length
+    let sendNewTodo = props.sendNewTodo
     const [newTodo, setNewTodo] = useState({
         text: '',
         date: new Date(),
@@ -19,6 +20,7 @@ const NewTodo = (props) => {
         //
         setTodos([...todos, newTodo])
         newKey++
+        sendNewTodo(newTodo)
         setNewTodo({
             text: '',
             date: new Date(),
