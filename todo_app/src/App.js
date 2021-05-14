@@ -5,9 +5,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import All from './All'
 import Todos from './Todos'
-import Done from './Done'
 function App() {
   const [todos, setTodos] = useState([])
   return (
@@ -16,7 +14,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to='/todos' todos={todos} setTodos={setTodos}>Todos</Link>
+              <Link to='/todos'>Todos</Link>
             </li>
             <li>
               <Link to='/done'>Done</Link>
@@ -28,13 +26,13 @@ function App() {
         </nav>
         <Switch>
           <Route path='/todos'>
-            <Todos />
+            <Todos type='Not Done' todos={todos} setTodos={setTodos} />
           </Route>
           <Route path='/done'>
-            <Done />
+            <Todos type='Done' todos={todos} setTodos={setTodos} />
           </Route>
           <Route path='/all'>
-            <All />
+            <Todos type='' todos={todos} setTodos={setTodos} />
           </Route>
         </Switch>
       </div>

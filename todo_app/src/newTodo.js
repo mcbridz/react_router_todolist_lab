@@ -1,31 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const newTodo = (props) => {
+const NewTodo = (props) => {
     let todos = props.todos
     let setTodos = props.setTodos
+    let newKey = todos.length
+    let displayedTodos = props.displayedTodos
+    let setDisplayedTodos = props.setDisplayedTodos
     const [newTodo, setNewTodo] = useState({
         text: '',
         date: new Date(),
-        done: false
+        done: false,
+        id: newKey
     })
     const handleSubmit = (evt) => {
         evt.preventDefault()
+        // console.log('new TODO')
+        // console.log(newTodo)
         //function for sending todo data
         //TO-CODE
         //
-        setTodos({ ...todos, newTodo })
+        setTodos([...todos, newTodo])
+        setDisplayedTodos([...displayedTodos, newTodo])
+        newKey++
         setNewTodo({
             text: '',
-            date: newDate(),
-            done: false
+            date: new Date(),
+            done: false,
+            id: newKey
         })
     }
     const handleChange = (evt) => {
         const value = evt.target.value
         setNewTodo({
             text: value,
-            date: newDate(),
-            done: false
+            date: new Date(),
+            done: false,
+            id: newKey
         })
     }
     return (
@@ -45,4 +55,4 @@ const newTodo = (props) => {
     )
 }
 
-export default newTodo
+export default NewTodo
