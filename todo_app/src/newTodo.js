@@ -4,8 +4,6 @@ const NewTodo = (props) => {
     let todos = props.todos
     let setTodos = props.setTodos
     let newKey = todos.length
-    let displayedTodos = props.displayedTodos
-    let setDisplayedTodos = props.setDisplayedTodos
     const [newTodo, setNewTodo] = useState({
         text: '',
         date: new Date(),
@@ -20,7 +18,6 @@ const NewTodo = (props) => {
         //TO-CODE
         //
         setTodos([...todos, newTodo])
-        setDisplayedTodos([...displayedTodos, newTodo])
         newKey++
         setNewTodo({
             text: '',

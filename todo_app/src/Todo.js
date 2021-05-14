@@ -7,18 +7,15 @@ const Todo = (props) => {
     // console.log(date)
     let id = props.id
     let markDone = props.markDone
-    let todos = props.todos
     // console.log('todos')
     // console.log(todos)
     let setTodos = props.setTodos
-    let displayPosition = props.displayPosition
-    let displayTodos = props.displayedTodos
-    let setDisplayedTodos = props.setDisplayedTodos
+    let todos = props.todos
     // console.log('displayTodos')
     // console.log(displayTodos)
     return (
         <li>
-            <div>{text}{(props.done) ? '' : <button onClick={() => markDone(id, todos, displayPosition, displayTodos, setTodos, setDisplayedTodos)}>Done</button>}</div>
+            <div>{text}{(props.done) ? '' : <button onClick={() => markDone(id, todos, setTodos)}>Done</button>}</div>
             <div>{date.toString()}</div>
         </li>
     )
