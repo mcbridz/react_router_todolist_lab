@@ -6,7 +6,7 @@ const markDone = (index, todoArr, setTodos) => {
     // console.log('DING')
     todoArr[index].done = true
     let output = [...todoArr]
-    console.log(todoArr)
+    // console.log(todoArr)
     setTodos(output)
 }
 
